@@ -56,6 +56,5 @@
 
 
   function openImage(src) {
-    document.getElementById("modalImage").src = src;
-  }
-
+    document.getElementById("modalImage").src = src;
+  }
