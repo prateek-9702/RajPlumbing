@@ -1,5 +1,28 @@
-/********** Template CSS **********/
+/* ===== LIGHT MODE (Default) ===== */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --navbar-bg: #ffffff;
+  --section-bg: #f6f6f6;
+  --card-bg: #ffffff;
+  --border-color: #e0e0e0;
+  --link-color: #ff2f92;
+}
 
+/* ===== DARK MODE ===== */
+body.dark-mode {
+  --bg-color: #0d0d0d;
+  --text-color: #ffffff;
+  --navbar-bg: #000000;
+  --section-bg: #121212;
+  --card-bg: #1a1a1a;
+  --border-color: #2a2a2a;
+  --link-color: #ff2f92;
+}
+
+
+
+/********** Template CSS **********/
 .back-to-top {
     position: fixed;
     display: none;
@@ -82,9 +105,14 @@
 }
 
 .navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link.active {
-    color: var(--bs-primary);
+.navbar {
+  background-color: var(--navbar-bg);
 }
+
+.navbar .navbar-nav .nav-link {
+  color: var(--text-color);
+}
+
 
 @media (max-width: 991.98px) {
     .navbar .navbar-nav .nav-link,
@@ -416,5 +444,37 @@
 
 .image-box:hover {
     transform: scale(1.03);
+}
+
+/* Toggle Button */
+.theme-toggle {
+  width: 90px;
+  height: 38px;
+  background: #eee;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+.theme-toggle .icon {
+  width: 50%;
+  text-align: center;
+  z-index: 2;
+  font-size: 16px;
+}
+
+.toggle-circle {
+  width: 34px;
+  height: 34px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 3px;
+  top: 2px;
+  transition: all 0.3s ease;
 }
 

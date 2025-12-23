@@ -58,3 +58,20 @@
   function openImage(src) {
     document.getElementById("modalImage").src = src;
   }
+
+const toggle = document.getElementById("themeToggle");
+
+/* Load saved theme */
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark-mode");
+}
+
+/* Toggle */
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  localStorage.setItem(
+    "theme",
+    document.body.classList.contains("dark-mode") ? "dark" : "light"
+  );
+});
